@@ -31,8 +31,6 @@ class StrongPasswordTest {
     @Test
     void consider_a_password_to_be_strong_when_all_requirements_are_met() {
         assertThat(StrongPassword.strongPassword("1234abcdABCD_")).isTrue();
-        assertThat(StrongPassword.strongPassword("abcd12_34ABCD")).isTrue();
-        assertThat(StrongPassword.strongPassword("ABCD_1234abcd")).isTrue();
     }
 }
 

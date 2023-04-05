@@ -12,13 +12,18 @@ class StrongPasswordTest {
         assertThat(StrongPassword.strongPassword("")).isFalse();
         assertThat(StrongPassword.strongPassword("passw")).isFalse();
     }
+    @Test
+    void must_contain_numbers() {
+        assertThat(StrongPassword.strongPassword("password")).isFalse();
+    }
+
 }
 
 /*
 Casos de uso:
-"" -> false
-"pass" -> false
-"password" -> false
+"" -> false *
+"pass" -> false *
+"password" -> false *
 "123456" -> false
 "P123456" -> false
 "Pass123456" -> false

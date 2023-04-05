@@ -22,7 +22,11 @@ class StrongPasswordTest {
     }
     @Test
     void must_contain_lowercase() {
-        assertThat(StrongPassword.strongPassword("PASSWORD5")).isFalse();
+        assertThat(StrongPassword.strongPassword("P123456")).isFalse();
+    }
+    @Test
+    void must_contain_underscore() {
+        assertThat(StrongPassword.strongPassword("Pass123456")).isFalse();
     }
 }
 
@@ -31,8 +35,8 @@ Casos de uso:
 "" -> false *
 "pass" -> false *
 "password" -> false *
-"123456" -> false
-"P123456" -> false
-"Pass123456" -> false
+"123456" -> false *
+"P123456" -> false *
+"Pass123456" -> false *
 "Pass_123456" -> true
 */

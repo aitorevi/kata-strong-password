@@ -5,7 +5,7 @@ import com.sun.source.tree.IfTree;
 public class StrongPassword {
 
     public static void main(String[] args) {
-        System.out.println(strongPassword("Password5"));
+        System.out.println(strongPassword("Passsssssss"));
     }
 
     public static boolean strongPassword(String password) {

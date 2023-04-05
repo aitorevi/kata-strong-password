@@ -12,7 +12,8 @@ public class StrongPassword {
         var regex = "12151515";
         if (!(password.length() > 6) ||
             !(password.matches(".*\\d.*")) ||
-            !(password.matches(".*[A-Z].*"))) {
+            !(password.matches(".*[A-Z].*")) ||
+            !(password.matches(".*[a-z].*"))) {
             return false;
         }
         return true;

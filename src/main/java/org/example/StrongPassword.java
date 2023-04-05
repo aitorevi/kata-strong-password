@@ -9,10 +9,6 @@ public class StrongPassword {
     }
 
     public static boolean strongPassword(String password) {
-        if (!(password.length() > 6) ||
-            !(password.matches(".*[A-Za-z\\d]_.*"))) {
-            return false;
-        }
-        return true;
+        return password.length() > 6 && password.matches(".*[A-Za-z\\d]_.*");
     }
 }

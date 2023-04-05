@@ -16,7 +16,10 @@ class StrongPasswordTest {
     void must_contain_numbers() {
         assertThat(StrongPassword.strongPassword("password")).isFalse();
     }
-
+    @Test
+    void must_contain_capital_letter() {
+        assertThat(StrongPassword.strongPassword("password5")).isFalse();
+    }
 }
 
 /*

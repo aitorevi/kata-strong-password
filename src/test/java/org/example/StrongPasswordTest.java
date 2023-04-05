@@ -17,8 +17,12 @@ class StrongPasswordTest {
         assertThat(StrongPassword.strongPassword("password")).isFalse();
     }
     @Test
-    void must_contain_capital_letter() {
+    void must_contain_uppercase() {
         assertThat(StrongPassword.strongPassword("password5")).isFalse();
+    }
+    @Test
+    void must_contain_lowercase() {
+        assertThat(StrongPassword.strongPassword("PASSWORD5")).isFalse();
     }
 }
 
